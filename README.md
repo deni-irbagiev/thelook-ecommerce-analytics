@@ -35,8 +35,10 @@ Five-page Power BI report on a layered SQL Server warehouse. Data is [TheLook eC
 ## How it's built
 
 ```
-CSV → src (raw, never modified) → cleaned (trim, NULLIF, quality flags)
-    → analytics (3 dimensions, 4 facts) → reporting (7 views)
+CSV → src (raw, never modified) 
+    → cleaned (trim, NULLIF, quality flags)
+    → analytics (3 dimensions, 4 facts) 
+    → reporting (7 views)
     → Power BI (63 measures)
 ```
 
