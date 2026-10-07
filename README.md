@@ -4,7 +4,7 @@
 
 Five-page Power BI report on a layered SQL Server warehouse. Data is [TheLook eCommerce](https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce), a synthetic clothing retailer published by Google — seven source tables, 116K orders, 664K web sessions, January 2019 to December 2023.
 
-**Stack:** SQL Server (T-SQL) · SSMS · Power BI Desktop · Power Query (M) · DAX · 63 measures
+**Stack:** SQL Server (T-SQL) · SSMS · Power BI Desktop · Power Query (M) · DAX · 57 measures
 
 ---
 
@@ -39,7 +39,7 @@ CSV → src (raw, never modified)
     → cleaned (trim, NULLIF, quality flags)
     → analytics (3 dimensions, 4 facts) 
     → reporting (7 views)
-    → Power BI (63 measures)
+    → Power BI (57 measures)
 ```
 
 Business logic — cutoffs, status exclusions, rate components — is defined once in SQL. DAX only handles what has to respond to the user's filters. Chapters `1`–`4` validate, `5`–`6` build, `7_1`–`7_5` explore by domain, `8` delivers the views Power BI reads.
@@ -83,7 +83,8 @@ The dataset is synthetic, so the magnitudes are not real-retail benchmarks. The 
    [BigQuery public dataset](https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce)
    — `users`, `products`, `orders`, `order_items`, `inventory_items`,
    `distribution_centers`, `events`.
-2. Run `sql/1` to create the schemas, then import the CSVs into `src`
+2. Run `SQL/1` to create the schemas, then import the CSVs into `src`
    using the SSMS Import Wizard.
-3. Run `sql/2` through `sql/8` in order.
+3. Run `SQL/2` through `SQL/8` in order.
 4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh.
+5. 
