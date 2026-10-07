@@ -83,7 +83,8 @@ The dataset is synthetic, so the magnitudes are not real-retail benchmarks. The 
    [BigQuery public dataset](https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce)
    — `users`, `products`, `orders`, `order_items`, `inventory_items`,
    `distribution_centers`, `events`.
-2. Run `sql/1` to create the schemas, then import the CSVs into `src`
+2. Run `SQL/1` to create the schemas, then import the CSVs into `src`
    using the SSMS Import Wizard.
-3. Run `sql/2` through `sql/8` in order.
+3. Run `SQL/2` through `SQL/8` in order.
 4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh.
+5. 
