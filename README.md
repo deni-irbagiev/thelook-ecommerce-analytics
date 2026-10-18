@@ -24,7 +24,7 @@ Five-page Power BI report on a layered SQL Server warehouse. Data is [TheLook eC
 
 ![Sales & Product Performance](Screenshots/02_sales_product.jpg)
 
-**Jeans is the clearest pricing target.** Outerwear & Coats ($907K) and Jeans ($878K) sit at near-identical revenue, but Outerwear is above the 50.83% average margin line and Jeans below it. Same volume, different quality of revenue.
+**Jeans is the clearest pricing target.** Outerwear & Coats ($907K) and Jeans ($878K) sit at near-identical revenue, but Outerwear is above the 50.83% category-average margin line and Jeans below it. Same volume, different quality of revenue.
 
 ![Logistics & Inventory](Screenshots/05_logistics_inventory.jpg)
 
@@ -87,4 +87,3 @@ The dataset is synthetic, so the magnitudes are not real-retail benchmarks. The 
    using the SSMS Import Wizard.
 3. Run `SQL/2` through `SQL/8` in order.
 4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh.
-5. 
