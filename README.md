@@ -81,8 +81,7 @@ The dataset is synthetic, so the magnitudes are not real-retail benchmarks. The 
 
 1. Download the seven TheLook CSVs from the
    [BigQuery public dataset](https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce)
-   — `users`, `products`, `orders`, `order_items`, `inventory_items`,
-   `distribution_centers`, `events`.
+   — `users`, `products`, `orders`, `order_items`, `inventory_items`,`distribution_centers`, `events`.
 2. Run the four `CREATE SCHEMA` statements at the top of `SQL/1`, import the CSVs into `src` with the SSMS Import Wizard, then run the rest of `SQL/1`.
 3. Run `SQL/2` through `SQL/8` in order.
 4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh or open the `.pbit` template, which asks for both when it opens.
