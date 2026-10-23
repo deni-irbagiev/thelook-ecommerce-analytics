@@ -16,11 +16,11 @@ Five-page Power BI report on a layered SQL Server warehouse. Data is [TheLook eC
 
 ![Marketing Funnel](Screenshots/04_marketing_funnel.jpg)
 
-**249K sessions added something to a cart and left.** 664K sessions, 63% reach a cart, 25% buy. Drop-offs have stayed flat at 45–50K a year while sessions nearly doubled — the rate improved sharply, the volume of lost sessions didn't. This is the cheapest loss to attack, because that traffic is already on the site and already intent-qualified.
+**249K sessions added something to a cart and left.** 664K sessions, 63% reach a cart, 25% buy. Drop-offs have stayed flat at about 50K a year while sessions nearly doubled — the rate improved sharply, the volume of lost sessions didn't. This is the cheapest loss to attack, because that traffic is already on the site and already intent-qualified.
 
 ![Customer Analysis](Screenshots/03_customer_analysis.jpg)
 
-**Only 19% of customers ever return, and Search drives more revenue than the other four channels combined.** Growth bought through a single channel, with no repeat-purchase base to absorb a shock to that channel's economics. Nothing in the demographics offers an alternative lever — customer counts are broadly similar across age bands and conversion sits at roughly 25% on every browser.
+**Only 19% of customers came back in a later year, and search drives several times more revenue than the other four channels combined.** Growth bought through a single channel, with no repeat-purchase base to absorb a shock to that channel's economics. Nothing in the demographics offers an alternative lever — customer counts are flat across ages (about 1,150 per year of age; Under 25 and 65+ only look different because they span 13 and 6 ages).
 
 ![Sales & Product Performance](Screenshots/02_sales_product.jpg)
 
@@ -59,10 +59,10 @@ Business logic — cutoffs, status exclusions, rate components — is defined on
 ## Limitations
 
 - **The Product and Logistics pages can't be filtered by year.** Both views combine period measures (revenue, returns) with point-in-time inventory measures (sell-through, unsold stock). Adding a year grain would split revenue correctly but duplicate the inventory figures across every year, so the real fix is to separate flow from stock into two views rather than add a column.
-- **Customer metrics are year-grain only**; anything below Year is meaningless.
+- **Customer metrics are year-grain only**; anything below year level is meaningless.
 - **`Total customers` counts purchasers, not registered users.**
 - **Session traffic sources and customer acquisition sources use different vocabularies**, so the funnel and acquisition analyses can't be joined channel-to-channel.
-- **The dataset is synthetic.** A 63% session-to-cart rate is roughly ten times what real retail sees — the method transfers, the values don't.
+- **The dataset is synthetic.** A 63% session-to-cart rate is several times what real retail sees — the method transfers, the values don't.
 
 ---
 
@@ -71,7 +71,7 @@ Business logic — cutoffs, status exclusions, rate components — is defined on
 The dataset is synthetic, so the magnitudes are not real-retail benchmarks. The relative comparisons hold, because both sides of each come from the same source.
 
 - **Test cart recovery before buying more traffic.** 249K sessions reached a cart and left — the largest single loss in the funnel, and already paid for.
-- **Reduce the Search dependency.** It drives $5.27M of customer revenue against $2.26M from the other four channels combined, with only a 19% repeat rate to absorb a shift in that channel.
+- **Reduce the Search dependency.** It drives $5.27M of customer revenue against $2.26M from the other four channels combined, with only a 19% returning-customer rate to absorb a shift in that channel.
 - **Review Jeans on price or cost.** Equal revenue to Outerwear, below-average margin — the clearest single margin opportunity in the catalogue.
 - **Clear the 180-day inventory tier.** The aging analysis in chapter 7.5 already isolates it and names the slowest-moving products.
 
@@ -83,7 +83,6 @@ The dataset is synthetic, so the magnitudes are not real-retail benchmarks. The 
    [BigQuery public dataset](https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce)
    — `users`, `products`, `orders`, `order_items`, `inventory_items`,
    `distribution_centers`, `events`.
-2. Run `SQL/1` to create the schemas, then import the CSVs into `src`
-   using the SSMS Import Wizard.
+2. Run the four `CREATE SCHEMA` statements at the top of `SQL/1`, import the CSVs into `src` with the SSMS Import Wizard, then run the rest of `SQL/1`.
 3. Run `SQL/2` through `SQL/8` in order.
-4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh.
+4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh or open the `.pbit` template, which asks for both when it opens.

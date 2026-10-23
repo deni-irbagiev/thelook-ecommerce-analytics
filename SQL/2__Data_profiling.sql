@@ -5,7 +5,7 @@ Checked for:
 1. PK duplicates
 2. Some missing values
 3. Date coverage 
-4. Categorial distributions
+4. Categorical distributions
 5. Basic numeric ranges
 */
 
@@ -212,7 +212,7 @@ SELECT
     MAX(created_at)
 FROM src.events;
 
--- 4) Important categorial distributions 
+-- 4) Important categorical distributions 
 SELECT
     status,
     COUNT(*) AS order_count
