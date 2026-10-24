@@ -5,7 +5,7 @@ Created project schemas, imported source files,
 checked data types and primary keys, and previewed the tables.
 */
 
--- Project schemas: raw, cleaned, analytics, reporting
+-- Project schemas: src, cleaned, analytics, reporting
 
 IF SCHEMA_ID('src') IS NULL
     EXEC('CREATE SCHEMA src');

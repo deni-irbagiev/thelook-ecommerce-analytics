@@ -20,7 +20,7 @@ Five-page Power BI report on a layered SQL Server warehouse. Data is [TheLook eC
 
 ![Customer Analysis](Screenshots/03_customer_analysis.jpg)
 
-**Only 19% of customers came back in a later year, and search drives several times more revenue than the other four channels combined.** Growth bought through a single channel, with no repeat-purchase base to absorb a shock to that channel's economics. Nothing in the demographics offers an alternative lever — customer counts are flat across ages (about 1,150 per year of age; Under 25 and 65+ only look different because they span 13 and 6 ages).
+**Only 19% of customers came back in a later year, and Search drives more than twice the revenue of the other four channels combined.** Growth bought through a single channel, with no repeat-purchase base to absorb a shock to that channel's economics. Nothing in the demographics offers an alternative lever — customer counts are flat across ages (about 1,150 per year of age; Under 25 and 65+ only look different because they span 13 and 6 ages).
 
 ![Sales & Product Performance](Screenshots/02_sales_product.jpg)
 
@@ -81,7 +81,7 @@ The dataset is synthetic, so the magnitudes are not real-retail benchmarks. The 
 
 1. Download the seven TheLook CSVs from the
    [BigQuery public dataset](https://console.cloud.google.com/marketplace/product/bigquery-public-data/thelook-ecommerce)
-   — `users`, `products`, `orders`, `order_items`, `inventory_items`,`distribution_centers`, `events`.
+   — `users`, `products`, `orders`, `order_items`, `inventory_items`, `distribution_centers`, `events`. The CSVs used here were exported from BigQuery on 27 July 2026.
 2. Run the four `CREATE SCHEMA` statements at the top of `SQL/1`, import the CSVs into `src` with the SSMS Import Wizard, then run the rest of `SQL/1`.
 3. Run `SQL/2` through `SQL/8` in order.
-4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh or open the `.pbit` template, which asks for both when it opens.
+4. Open the `.pbix`, set the `ServerName` and `DatabaseName` parameters, refresh.
